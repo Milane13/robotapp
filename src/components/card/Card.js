@@ -1,12 +1,15 @@
 import React from "react";
 
-const Card = () => {
+
+// On reçoit en tant que Props chaque ID, name, email de chaque robot que l'on va afficher
+
+const Card = ({id, name, email}) => {
   return (
-    <div className="bg-light-green dib br3 ma2 grow bw2 shadow-5">
-        <img alt="robot" src="https://robohash.org/Ilane?size=200x200"/>
+    <div className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+        <img alt="robot" src={`https://robohash.org/${id}?size=200x200`}/>
       <div>
-        <h2>C3PO</h2>
-        <p>C3PO@gmail.com</p>
+        <h2>{name}</h2>
+        <p>{email}</p>
       </div>
     </div>
   );
